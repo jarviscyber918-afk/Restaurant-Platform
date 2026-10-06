@@ -701,25 +701,43 @@
   <div class="cart-backdrop" id="cartBackdrop"></div>
 
   <!-- Mobile Bottom Navigation Bar -->
-  <nav class="mobile-bottom-strip" aria-label="Mobile Navigation">
-    <a href="#hero" class="mobile-strip-tab" id="tabHome">
-      <i class="fa-solid fa-house"></i>
-      <span data-i18n="tab_home">Home</span>
+  <nav class="mobile-bottom-nav">
+    <!-- 1. Home / الرئيسية -->
+    <a href="#hero" class="mobile-nav-tab active" id="tabHome">
+      <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+      <span data-i18n="nav_home">الرئيسية</span>
     </a>
-    <a href="#menu" class="mobile-strip-tab" id="tabMenu">
-      <i class="fa-solid fa-utensils"></i>
-      <span data-i18n="tab_menu">Menu</span>
+
+    <!-- 2. Menu / القائمة -->
+    <a href="#menu" class="mobile-nav-tab" id="tabMenu">
+      <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+      <span data-i18n="nav_menu">القائمة</span>
     </a>
-    <a href="#reservation" class="mobile-strip-tab open-res-link" id="tabBook">
-      <i class="fa-solid fa-calendar-check"></i>
-      <span data-i18n="tab_book">Book</span>
+
+    <!-- 3. Reservations / الحجز -->
+    <a href="#reservation" class="mobile-nav-tab open-res-link" id="tabBook">
+      <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+      <span data-i18n="nav_book">الحجز</span>
     </a>
-    <button type="button" class="mobile-strip-tab" id="tabCart">
-      <div class="tray-tab-icon-wrap">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span class="tray-mobile-badge" id="mobileTabBadge">0</span>
+
+    <!-- 4. Order Tray / الطلب -->
+    <button type="button" class="mobile-nav-tab" id="tabCart">
+      <div class="relative">
+        <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <!-- شارة العداد (Badge) -->
+        <span id="mobileTabBadge" class="absolute -top-1 -right-2 bg-blue-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+          0
+        </span>
       </div>
-      <span data-i18n="tab_tray">Order</span>
+      <span data-i18n="nav_order">الطلب</span>
     </button>
   </nav>
 

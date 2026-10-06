@@ -1742,7 +1742,7 @@ html[dir="rtl"] .total-stacked-price {
 /* ==========================================================================
    10. MOBILE BOTTOM NAVIGATION STRIP
    ========================================================================== */
-.mobile-bottom-strip {
+.mobile-bottom-nav {
   display: none;
   position: fixed;
   bottom: 0;
@@ -1756,7 +1756,7 @@ html[dir="rtl"] .total-stacked-price {
   align-items: center;
   padding: 0 10px;
 }
-.mobile-strip-tab {
+.mobile-nav-tab {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1767,6 +1767,10 @@ html[dir="rtl"] .total-stacked-price {
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+.mobile-nav-tab.active {
+  color: var(--cobalt-primary);
 }
 .tray-tab-icon-wrap {
   position: relative;
@@ -1864,7 +1868,7 @@ html[dir="rtl"] .toast-stack-container {
   .brutalist-hamburger {
     display: flex;
   }
-  .mobile-bottom-strip {
+  .mobile-bottom-nav {
     display: flex;
   }
   .hero-massive-title {
