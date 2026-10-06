@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAR | Wood-Fired Prime Steaks & Wagyu Burgers • Hydra, Alger</title>
+  <meta name="description" content="CHAR — Wood-fired prime steaks & authentic Wagyu burgers in Hydra, Algiers. 950°C oak ember sear, 45-day Himalayan dry-aging, and raw flash culinary craft." />
+
+  <!-- Favicon: Oval Pill ( CHAR ) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230A0A0A'/><text x='50%25' y='65%25' font-size='14' font-weight='900' fill='%23EEEDF2' text-anchor='middle' font-family='sans-serif'>C</text></svg>" />
+
+  <!-- Google Fonts: Syne, Space Grotesk, Inter, Alexandria, Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Pro Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="neo-brutalist-body">
+
+<div id="intro-curtain" class="intro-curtain">
+  <div class="curtain-panel curtain-left"></div>
+  <div class="curtain-panel curtain-right"></div>
+  <div class="curtain-brand-card">
+    <div class="brand-pill curtain-logo">( CHAR )</div>
+    <span class="curtain-subtitle">WOOD-FIRED STEAKS • ALGER</span>
+  </div>
+</div>
+
+  <!-- =========================================================================
+       1. HEADER (MINIMALIST NEO-BRUTALIST STRIP)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="header-container max-w-7xl mx-auto px-6 lg:px-8 w-full flex items-center justify-between py-4">
+      <!-- Mobile Menu Button -->
+      <button type="button" class="brutalist-hamburger lg:hidden flex" id="mobileMenuBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Desktop Brand Logo -->
+      <div class="hidden lg:flex items-center ml-4">
+        <div class="bg-black text-white px-6 py-2 rounded-full font-black text-xl tracking-wider shadow-md whitespace-nowrap">
+          <span class="opacity-70">(</span>
+          <span data-i18n="brand_name">CHAR</span>
+          <span class="opacity-70">)</span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-bold text-lg">
+        <a href="#hero" class="hover:text-blue-600 transition" data-i18n="nav_home">Home</a>
+        <a href="#menu" class="hover:text-blue-600 transition" data-i18n="nav_menu">Menu</a>
+        <a href="#reservation" class="hover:text-blue-600 transition open-res-link" data-i18n="nav_reservation">Reservations</a>
+      </nav>
+
+      <div class="header-actions flex items-center gap-4">
+        <button class="lang-btn" id="langToggleBtn" aria-label="Language"><span id="langCurrentLabel">🌐 العربية</span></button>
+        <button class="cart-btn" id="cartToggleBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer-brutalist" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div class="brand-oval-badge">
+        <span class="badge-bracket">(</span>
+        <span class="badge-core-text" data-i18n="brand_name">CHAR</span>
+        <span class="badge-bracket">)</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="closeDrawerBtn" aria-label="Close Drawer">&times;</button>
+    </div>
+    
+    <nav class="mobile-drawer-nav">
+      <ul class="mobile-links-list">
+        <li><a href="#hero" class="mobile-link" data-i18n="nav_home">Home</a></li>
+        <li><a href="#menu" class="mobile-link" data-i18n="nav_menu">Menu</a></li>
+        <li><a href="#story" class="mobile-link" data-i18n="nav_story">Story & Craft</a></li>
+        <li><a href="#reservation" class="mobile-link open-res-link" data-i18n="nav_reservation">Reservations</a></li>
+        <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">Location & Hours</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-drawer-bottom">
+      <button type="button" class="btn-pill-lang w-100" id="drawerLangToggleBtn">
+        <i class="fa-solid fa-globe"></i>
+        <span id="drawerLangLabel">Switch to العربية</span>
+      </button>
+      <a href="#reservation" class="btn-cobalt-action w-100 open-res-link" data-i18n="btn_book_table">
+        Book a Table <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- =========================================================================
+       MAIN LAYOUT FLOW
+       ========================================================================= -->
+  <main id="mainApp">
+
+    <!-- =======================================================================
+         2. HERO SECTION (DUAL PHOTO EDITORIAL GRID)
+         ======================================================================= -->
+    <section class="hero-brutalist-section py-16" id="hero">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Text Side (Right in RTL, handled by standard flex column) -->
+        <div class="flex flex-col space-y-4 lg:order-last" style="text-align: inherit;">
+          <div class="hero-tag-badge w-fit" data-i18n="hero_tagline_top">
+            EST. 2026 • HYDRA, ALGER
+          </div>
+          <h1 class="hero-massive-title m-0" data-i18n="hero_main_title">
+            WOOD-FIRED<br />
+            STEAKS & WAGYU.
+          </h1>
+          <p class="hero-sub-statement" data-i18n="hero_sub_title" style="margin-bottom: 0.5rem;">
+            IT'S REAL AND IT'S DELICIOUS.
+          </p>
+          <p class="mission-paragraph text-lg text-gray-700" data-i18n="hero_mission_text" style="max-width: 90%;">
+            We cook over 950°C natural oak embers. Certified BMS 11+ Japanese Wagyu, 45-day Himalayan salt dry-aged beef, smashed butter burgers, and unpretentious communal dining. No shortcuts, just real fire.
+          </p>
+
+          <div class="hero-actions-row pt-4 flex gap-4 flex-wrap">
+            <a href="#reservation" class="btn-cobalt-action open-res-link" data-i18n="btn_reserve_hero">
+              <span>Reserve a Table</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#menu" class="btn-outline-action" data-i18n="btn_explore_menu">
+              <span>Explore Menu</span>
+              <i class="fa-solid fa-utensils"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Side (Left in RTL) -->
+        <div class="hero-photo-top-right w-full">
+          <div class="flash-photo-card rounded-2xl overflow-hidden shadow-2xl relative w-full h-auto">
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+              alt="Prime Dry-Aged Steak Cut"
+              class="flash-img w-full h-full object-cover"
+              loading="eager"
+            />
+            <div class="photo-caption-tag absolute bottom-4 left-4 bg-black text-white px-4 py-2 text-sm font-bold rounded" data-i18n="hero_photo1_caption">
+              45-DAY DRY-AGED TOMAHAWK
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. ANIMATED MARQUEE TICKER (INFINITE SCROLL RIBBON)
+         ======================================================================= -->
+    <div class="marquee-ticker-container" aria-label="Restaurant Quick Highlights">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item">★ TUE - SUN: 12PM - 11PM</span>
+          <span class="marquee-item">★ 950°C WOOD-FIRED CHARCOAL SEAR</span>
+          <span class="marquee-item">★ HYDRA, ALGER</span>
+          <span class="marquee-item">★ AUTHENTIC A5 JAPANESE WAGYU</span>
+          <span class="marquee-item">★ 45-DAY HIMALAYAN DRY-AGING</span>
+          <span class="marquee-item">★ REAL INGREDIENTS ONLY</span>
+          <span class="marquee-item">★ INSTANT WHATSAPP BOOKING</span>
+        </div>
+        <!-- Duplicate for seamless 100% infinite CSS loop -->
+        <div class="marquee-content" aria-hidden="true">
+          <span class="marquee-item">★ TUE - SUN: 12PM - 11PM</span>
+          <span class="marquee-item">★ 950°C WOOD-FIRED CHARCOAL SEAR</span>
+          <span class="marquee-item">★ HYDRA, ALGER</span>
+          <span class="marquee-item">★ AUTHENTIC A5 JAPANESE WAGYU</span>
+          <span class="marquee-item">★ 45-DAY HIMALAYAN DRY-AGING</span>
+          <span class="marquee-item">★ REAL INGREDIENTS ONLY</span>
+          <span class="marquee-item">★ INSTANT WHATSAPP BOOKING</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         4. STORY & CRAFT SECTION
+         ======================================================================= -->
+    <section class="story-craft-section" id="story">
+      <div class="container story-grid">
+        
+        <!-- Left: Flash Photo of Prime Grill Cuts on Stone Plates -->
+        <div class="story-image-col">
+          <div class="w-full px-4 sm:px-6 py-4 flex justify-center">
+            <div class="w-full max-w-md bg-[#111111] rounded-2xl overflow-hidden shadow-lg flex flex-col">
+              <!-- حاوية الصورة -->
+              <div class="w-full aspect-[4/3] overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80" 
+                  alt="Raw Cuts" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- الجزء السفلي من البطاقة -->
+              <div class="p-4 flex justify-start">
+                <span class="inline-block border border-yellow-600/30 bg-black text-[#eaeaea] text-[10px] font-mono tracking-wider uppercase px-3 py-1.5 rounded-md" data-i18n="story_photo_caption">
+                  RAW CUTS • 100% WOOD-FIRED EMBERS
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Typography with Bold Inline Keywords & Cobalt CTA -->
+        <div class="story-content-col">
+          <div class="section-label-pill" data-i18n="story_section_label">
+            OUR PHILOSOPHY
+          </div>
+
+          <h2 class="flex flex-col gap-2 text-xl font-black uppercase tracking-tight text-black my-6" data-i18n="story_heading">
+            <span class="leading-tight">TRANSFORMED BY</span>
+            <span class="text-blue-600 border-b-2 border-blue-600 inline-block w-fit pb-1 leading-tight">
+              PITMASTERS
+            </span>
+            <span class="leading-tight pt-1">OVER RAW FIRE.</span>
+          </h2>
+
+          <div class="story-body-text">
+            <p data-i18n="story_p1">
+              At CHAR, we stripped away the fuss of traditional dining. We source the finest BMS 11+ Japanese Miyazaki beef and locally raised prime cattle, aging them for 45 days in temperature-controlled pink salt chambers.
+            </p>
+            <p data-i18n="story_p2">
+              Every cut meets the scorching 950°C heat of seasoned Algerian white oak wood. The result is a glass-like caramelized crust, a tender rose core, and pure woodsmoke depth.
+            </p>
+          </div>
+
+          <!-- Feature Metric Grid -->
+          <div class="story-metrics-row">
+            <div class="metric-box">
+              <span class="metric-num">950°C</span>
+              <span class="metric-lbl" data-i18n="metric_1">Open Hearth Heat</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-num">45 DAYS</span>
+              <span class="metric-lbl" data-i18n="metric_2">Himalayan Salt Aging</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-num">100%</span>
+              <span class="metric-lbl" data-i18n="metric_3">Halal & Pure Fire</span>
+            </div>
+          </div>
+
+          <div class="story-cta-wrap">
+            <a href="#menu" class="btn-cobalt-action" data-i18n="btn_story_cta">
+              <span>Explore Our Cuts</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. INTERACTIVE MENU & WHATSAPP TRAY
+         ======================================================================= -->
+    <section class="menu-brutalist-section" id="menu">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="menu-section-header">
+          <div class="header-titles">
+            <div class="section-label-pill" data-i18n="menu_section_label">
+              CURRENT SPECIALTIES
+            </div>
+            <h2 class="menu-massive-title" data-i18n="menu_heading">
+              THE FOOD & DRINKS
+            </h2>
+          </div>
+          <p class="menu-subtitle-lead" data-i18n="menu_lead">
+            Select your cuts, burgers, and wood-fired sides. Adjust portion quantities with steppers and dispatch straight to our WhatsApp kitchen.
+          </p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter-container">
+          <!-- Mobile Custom Dropdown -->
+          <div class="category-dropdown-mobile custom-dropdown">
+            <button type="button" class="custom-dropdown-btn" id="mobileDropdownBtn">
+              <span id="mobileDropdownLabel">ALL ITEMS (0)</span>
+              <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="custom-dropdown-menu" id="mobileDropdownMenu">
+              <div class="dropdown-menu-inner">
+                <button type="button" class="dropdown-item active" data-cat="all">
+                  <span>ALL ITEMS</span>
+                  <span class="dropdown-count" id="dropCountAll">0</span>
+                </button>
+                <button type="button" class="dropdown-item" data-cat="steaks">
+                  <span>PRIME STEAKS</span>
+                  <span class="dropdown-count" id="dropCountSteaks">0</span>
+                </button>
+                <button type="button" class="dropdown-item" data-cat="wagyu">
+                  <span>WAGYU BURGERS</span>
+                  <span class="dropdown-count" id="dropCountWagyu">0</span>
+                </button>
+                <button type="button" class="dropdown-item" data-cat="sides">
+                  <span>WOOD-FIRED SIDES</span>
+                  <span class="dropdown-count" id="dropCountSides">0</span>
+                </button>
+                <button type="button" class="dropdown-item" data-cat="drinks">
+                  <span>DRINKS & DESSERTS</span>
+                  <span class="dropdown-count" id="dropCountDrinks">0</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Pills -->
+          <div class="category-filter-strip desktop-only">
+            <div class="category-scrollable-bar" role="tablist" aria-label="Menu Categories">
+              <button type="button" class="btn-cat-pill active" data-cat="all" role="tab" aria-selected="true">
+                <span data-i18n="cat_all">All Items</span>
+                <span class="count-bubble" id="pillCountAll">0</span>
+              </button>
+              <button type="button" class="btn-cat-pill" data-cat="steaks" role="tab" aria-selected="false">
+                <span data-i18n="cat_steaks">Prime Steaks</span>
+                <span class="count-bubble" id="pillCountSteaks">0</span>
+              </button>
+              <button type="button" class="btn-cat-pill" data-cat="wagyu" role="tab" aria-selected="false">
+                <span data-i18n="cat_wagyu">Wagyu Burgers</span>
+                <span class="count-bubble" id="pillCountWagyu">0</span>
+              </button>
+              <button type="button" class="btn-cat-pill" data-cat="sides" role="tab" aria-selected="false">
+                <span data-i18n="cat_sides">Wood-Fired Sides</span>
+                <span class="count-bubble" id="pillCountSides">0</span>
+              </button>
+              <button type="button" class="btn-cat-pill" data-cat="drinks" role="tab" aria-selected="false">
+                <span data-i18n="cat_drinks">Drinks & Desserts</span>
+                <span class="count-bubble" id="pillCountDrinks">0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar Toolbar -->
+        <div class="menu-search-toolbar">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input
+              type="text"
+              id="menuSearchInput"
+              class="brutalist-search-input"
+              placeholder="Search steaks, burgers, sides (e.g. Ribeye, Wagyu, Truffle)..."
+              data-i18n-placeholder="search_placeholder"
+              maxlength="80"
+              autocomplete="off"
+            />
+            <button type="button" class="clear-search-btn" id="clearSearchBtn" aria-label="Clear Search" style="display:none;">&times;</button>
+          </div>
+        </div>
+
+        <!-- Dish Grid -->
+        <div class="brutalist-menu-grid" id="menuGridContainer">
+          <!-- Dynamically Rendered by app.js -->
+        </div>
+
+        <!-- No Results Fallback -->
+        <div class="no-results-panel" id="noResultsState" style="display:none;">
+          <div class="no-results-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 data-i18n="no_results_t">No items match your search</h3>
+          <p data-i18n="no_results_d">Try typing another ingredient or resetting the category filter.</p>
+          <button type="button" class="btn-cobalt-action btn-sm" id="resetFiltersBtn" data-i18n="btn_reset_filters">
+            Reset Filters
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. VIP TABLE RESERVATION SUITE
+         ======================================================================= -->
+    <section class="reservation-section" id="reservation">
+      <div class="container reservation-container">
+        
+        <div class="reservation-box-card">
+          <div class="reservation-header text-center">
+            <div class="section-label-pill" data-i18n="res_section_label">
+              ONLINE RESERVATION
+            </div>
+            <h2 class="res-massive-title" data-i18n="res_heading">
+              SECURE YOUR TABLE AT CHAR
+            </h2>
+            <p class="res-sub-lead" data-i18n="res_lead">
+              Direct table booking with instant WhatsApp concierge confirmation. No waiting lines.
+            </p>
+          </div>
+
+          <form id="reservationForm" class="brutalist-form-grid" novalidate>
+            <!-- Invisible Honeypots -->
+            <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none;width:0;height:0;" aria-hidden="true">
+              <input type="text" name="hp_user_token" id="hpTokenA" tabindex="-1" autocomplete="off" />
+              <input type="text" name="hp_business_id" id="hpTokenB" tabindex="-1" autocomplete="off" />
+            </div>
+            
+            <!-- Step 1: Party Size -->
+            <div class="form-group-block">
+              <label class="form-label-bold" data-i18n="lbl_party_size">1. Number of Guests *</label>
+              <div class="party-size-selector" role="radiogroup">
+                <button type="button" class="party-btn active" data-guests="2">2 Guests</button>
+                <button type="button" class="party-btn" data-guests="4">4 Guests</button>
+                <button type="button" class="party-btn" data-guests="6">6 Guests</button>
+                <button type="button" class="party-btn" data-guests="8">8+ Group</button>
+              </div>
+              <input type="hidden" id="resPartyInput" value="2" />
+            </div>
+
+            <!-- Step 2: Seating Area -->
+            <div class="form-group-block">
+              <label class="form-label-bold" data-i18n="lbl_seating_area">2. Seating Zone *</label>
+              <div class="seating-selector" role="radiogroup">
+                <button type="button" class="seating-btn active" data-zone="Grill Counter">
+                  <i class="fa-solid fa-fire"></i>
+                  <span>Grill Counter (Front Row)</span>
+                </button>
+                <button type="button" class="seating-btn" data-zone="Main Hall">
+                  <i class="fa-solid fa-users"></i>
+                  <span>Main Dining Hall</span>
+                </button>
+                <button type="button" class="seating-btn" data-zone="Outdoor Terrace">
+                  <i class="fa-solid fa-tree"></i>
+                  <span>Outdoor Heated Terrace</span>
+                </button>
+              </div>
+              <input type="hidden" id="resZoneInput" value="Grill Counter" />
+            </div>
+
+            <!-- Step 3: Date & Time -->
+            <div class="form-row-dual">
+              <div class="form-group-block">
+                <label for="resDate" class="form-label-bold" data-i18n="lbl_res_date">3. Date *</label>
+                <input type="date" id="resDate" class="brutalist-input" required />
+              </div>
+
+              <div class="form-group-block">
+                <label for="resTimeSlot" class="form-label-bold" data-i18n="lbl_res_time">4. Time Slot *</label>
+                <select id="resTimeSlot" class="brutalist-select" required>
+                  <option value="12:30 PM">12:30 PM - Lunch Service</option>
+                  <option value="14:00 PM">14:00 PM - Afternoon Service</option>
+                  <option value="19:30 PM" selected>19:30 PM - Prime Evening</option>
+                  <option value="20:30 PM">20:30 PM - Peak Grill Hour</option>
+                  <option value="21:30 PM">21:30 PM - Late Dinner</option>
+                  <option value="22:30 PM">22:30 PM - Nocturne</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Step 4: Contact Info -->
+            <div class="form-row-dual">
+              <div class="form-group-block">
+                <label for="resGuestName" class="form-label-bold" data-i18n="lbl_guest_name">5. Full Name *</label>
+                <input type="text" id="resGuestName" class="brutalist-input" placeholder="e.g. Karim Mansouri" required />
+              </div>
+
+              <div class="form-group-block">
+                <label for="resGuestPhone" class="form-label-bold" data-i18n="lbl_whatsapp_phone">6. WhatsApp Phone Number *</label>
+                <input type="tel" id="resGuestPhone" class="brutalist-input" placeholder="0550 12 34 56" required />
+              </div>
+            </div>
+
+            <!-- Step 5: Special Requests -->
+            <div class="form-group-block">
+              <label for="resNotes" class="form-label-bold" data-i18n="lbl_special_requests">7. Notes & Dietary Preferences</label>
+              <textarea id="resNotes" class="brutalist-textarea" rows="2" placeholder="e.g. Medium-rare steaks, celebrating birthday, high chair needed..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-cobalt-submit" id="submitResBtn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="btn_confirm_res_whatsapp">Confirm Reservation via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. LOCATION & HOURS STRIP
+         ======================================================================= -->
+    <section class="location-strip-section" id="contact">
+      <div class="container location-grid">
+        
+        <div class="location-card-block">
+          <h3 class="location-block-title" data-i18n="loc_title_address">LOCATION</h3>
+          <p class="location-text">
+            <strong>CHAR Bistro & Grill</strong><br />
+            14 Rue Djenane El Malik, Hydra<br />
+            Alger 16035, Algeria
+          </p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="location-link">
+            <span>Open in Google Maps</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="location-card-block">
+          <h3 class="location-block-title" data-i18n="loc_title_hours">SERVICE HOURS</h3>
+          <ul class="hours-list">
+            <li><span>Tuesday – Friday:</span> <strong>12:00 PM – 11:30 PM</strong></li>
+            <li><span>Saturday – Sunday:</span> <strong>12:00 PM – 12:00 AM</strong></li>
+            <li><span>Monday:</span> <strong class="text-muted">Closed for Butchery & Prep</strong></li>
+          </ul>
+        </div>
+
+        <div class="location-card-block">
+          <h3 class="location-block-title" data-i18n="loc_title_contact">DIRECT CONTACT</h3>
+          <p class="location-text">
+            WhatsApp Hotline: <strong>+213 550 12 34 56</strong><br />
+            Email: <strong>reservations@char-alger.com</strong><br />
+            Valet Parking Available on Site
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       8. 4-COLUMN NEO-BRUTALIST FOOTER
+       ========================================================================= -->
+  <footer class="brutalist-footer">
+    <div class="container footer-grid-container">
+      
+      <!-- Col 1: Business Hours -->
+      <div class="footer-col">
+        <h4 class="footer-col-heading" data-i18n="footer_col1_title">BUSINESS HOURS</h4>
+        <p class="footer-col-text">
+          Tue – Fri: 12:00 – 23:30<br />
+          Sat – Sun: 12:00 – 00:00<br />
+          Mon: Closed
+        </p>
+      </div>
+
+      <!-- Col 2: Location -->
+      <div class="footer-col">
+        <h4 class="footer-col-heading" data-i18n="footer_col2_title">LOCATION</h4>
+        <p class="footer-col-text">
+          14 Rue Djenane El Malik<br />
+          Hydra, Algiers<br />
+          Algeria
+        </p>
+      </div>
+
+      <!-- Col 3: Sitemap -->
+      <div class="footer-col">
+        <h4 class="footer-col-heading" data-i18n="footer_col3_title">SITEMAP</h4>
+        <ul class="footer-links">
+          <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="#menu" data-i18n="nav_menu">Menu</a></li>
+          <li><a href="#story" data-i18n="nav_story">Story & Craft</a></li>
+          <li><a href="#reservation" class="open-res-link" data-i18n="nav_reservation">Reservations</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Connect With Us -->
+      <div class="footer-col">
+        <h4 class="footer-col-heading" data-i18n="footer_col4_title">CONNECT WITH US</h4>
+        <div class="footer-socials">
+          <a
+            href="https://www.instagram.com/jarvis_cyber_"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-box-link"
+            aria-label="Instagram"
+          >
+            <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href="#" class="social-box-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/213550123456" target="_blank" rel="noopener noreferrer" class="social-box-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="footer-phone-tag">+213 550 12 34 56</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Center: Prominent Oval Badge ( CHAR ) -->
+    <div class="footer-bottom-badge-row">
+      <div class="brand-oval-badge-large">
+        <span class="badge-bracket">(</span>
+        <span class="badge-core-text">CHAR</span>
+        <span class="badge-bracket">)</span>
+      </div>
+      <p class="footer-copyright-text">
+        © 2026 CHAR WOOD-FIRED BISTRO. ALL RIGHTS RESERVED. IT'S REAL AND IT'S DELICIOUS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       9. SLIDE-OVER WHATSAPP CART DRAWER
+       ========================================================================= -->
+  <aside class="cart-drawer-brutalist" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="drawer-title-group">
+        <h3 class="drawer-title" data-i18n="cart_drawer_title">YOUR ORDER TRAY</h3>
+        <span class="drawer-item-pill" id="cartDrawerItemCount">0 Items</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="closeCartBtn" aria-label="Close Order Tray">&times;</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Empty Tray State -->
+      <div class="empty-tray-state" id="emptyTrayView">
+        <div class="empty-tray-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+        <h4 data-i18n="empty_cart_t">Your Tray is Empty</h4>
+        <p data-i18n="empty_cart_d">Add prime steaks, Wagyu burgers, and sides to initiate your WhatsApp order.</p>
+        <button type="button" class="btn-cobalt-action btn-sm" id="emptyTrayExploreBtn" data-i18n="btn_explore_menu">
+          Explore Menu
+        </button>
+      </div>
+
+      <!-- Active Cart Items List -->
+      <div class="cart-items-list" id="cartItemsStack">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Guest Details Form Inside Cart -->
+      <div class="cart-guest-section" id="cartGuestBlock" style="display:none;">
+        <h4 class="cart-subheading" data-i18n="cart_guest_heading">Guest & Order Details</h4>
+
+        <!-- Dine-In vs Takeaway Toggle -->
+        <div class="order-mode-toggle">
+          <button type="button" class="mode-btn active" data-type="Dine-In" id="cartTypeDineIn">
+            <i class="fa-solid fa-utensils"></i>
+            <span data-i18n="type_dine_in">Dine-In Table</span>
+          </button>
+          <button type="button" class="mode-btn" data-type="Takeaway" id="cartTypeTakeaway">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span data-i18n="type_takeaway">Takeaway / Delivery</span>
+          </button>
+        </div>
+
+        <div class="cart-field-group">
+          <label for="cartGuestName" data-i18n="lbl_guest_name">Full Name *</label>
+          <input type="text" id="cartGuestName" class="brutalist-input-sm" placeholder="e.g. Karim Mansouri" required />
+        </div>
+
+        <div class="cart-field-group">
+          <label for="cartGuestPhone" data-i18n="lbl_whatsapp_phone">WhatsApp Phone *</label>
+          <input type="tel" id="cartGuestPhone" class="brutalist-input-sm" placeholder="0550 12 34 56" required />
+        </div>
+
+        <div class="cart-field-group" id="cartTableNumField">
+          <label for="cartTableNumber" data-i18n="lbl_table_num">Table Number (If Seated)</label>
+          <input type="text" id="cartTableNumber" class="brutalist-input-sm" placeholder="e.g. Table 04 or Bar 02" />
+        </div>
+
+        <div class="cart-field-group">
+          <label for="cartOrderNotes" data-i18n="lbl_chef_instructions">Kitchen Preparation Notes</label>
+          <textarea id="cartOrderNotes" class="brutalist-textarea-sm" rows="2" placeholder="e.g. Steak medium-rare, extra smoked butter..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Footer & WhatsApp Checkout -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display:none;">
+      <div class="cart-totals-summary">
+        <div class="total-line">
+          <span data-i18n="subtotal_lbl">Subtotal</span>
+          <strong id="cartSubtotalAmount">0 DZD</strong>
+        </div>
+        <div class="total-line main-total">
+          <span data-i18n="total_lbl">Grand Total</span>
+          <div class="total-stacked-price">
+            <strong id="cartGrandTotalAmount">0 DZD</strong>
+            <small id="cartGrandTotalEur">≈ 0.00 €</small>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn-whatsapp-checkout" id="cartCheckoutWhatsAppBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span data-i18n="btn_send_order_whatsapp">Send Order via WhatsApp</span>
+      </button>
+
+      <button type="button" class="btn-clear-tray" id="clearCartBtn" data-i18n="btn_clear_cart">
+        <i class="fa-regular fa-trash-can"></i> Clear All Items
+      </button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-strip" aria-label="Mobile Navigation">
+    <a href="#hero" class="mobile-strip-tab" id="tabHome">
+      <i class="fa-solid fa-house"></i>
+      <span data-i18n="tab_home">Home</span>
+    </a>
+    <a href="#menu" class="mobile-strip-tab" id="tabMenu">
+      <i class="fa-solid fa-utensils"></i>
+      <span data-i18n="tab_menu">Menu</span>
+    </a>
+    <a href="#reservation" class="mobile-strip-tab open-res-link" id="tabBook">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span data-i18n="tab_book">Book</span>
+    </a>
+    <button type="button" class="mobile-strip-tab" id="tabCart">
+      <div class="tray-tab-icon-wrap">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="tray-mobile-badge" id="mobileTabBadge">0</span>
+      </div>
+      <span data-i18n="tab_tray">Order</span>
+    </button>
+  </nav>
+
+  <!-- Toast Container -->
+  <div class="toast-stack-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- App Script -->
+  <script src="./app.js"></script>
+</body>
+</html>
