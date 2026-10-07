@@ -1762,15 +1762,22 @@ html[dir="rtl"] .total-stacked-price {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  color: var(--text-carbon);
+  color: #a3a3a3; /* text-neutral-400 */
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
-  transition: color var(--transition-fast);
+  transition: color 200ms ease, transform 100ms ease-out;
+  transform: translateZ(0); /* transform-gpu */
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-nav-tab:active {
+  transform: scale(0.95) translateZ(0);
 }
 .mobile-nav-tab.active {
-  color: var(--cobalt-primary);
+  color: #2563eb; /* text-blue-600 */
+  font-weight: 700;
 }
 .tray-tab-icon-wrap {
   position: relative;

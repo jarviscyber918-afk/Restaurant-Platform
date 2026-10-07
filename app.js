@@ -1342,6 +1342,18 @@ function renderCartDrawer() {
 // Mobile Bottom Navigation Bar
 // --------------------------------------------------------------------------
 function initMobileBottomBar() {
+  const tabs = document.querySelectorAll('.mobile-nav-tab');
+  
+  // Tab Switching Logic
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+      // Remove active state from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      // Add active state to clicked tab
+      this.classList.add('active');
+    });
+  });
+
   const tabCart = document.getElementById('tabCart');
   const cartDrawer = document.getElementById('cartDrawer');
   const cartBackdrop = document.getElementById('cartBackdrop');
